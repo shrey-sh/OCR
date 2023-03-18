@@ -27,7 +27,6 @@ Jinja2==3.1.2
 joblib==1.2.0
 kiwisolver==1.4.4
 MarkupSafe==2.1.2
-matplotlib==3.7.1
 nltk==3.8.1
 numpy==1.24.2
 oauth2client==4.1.3
