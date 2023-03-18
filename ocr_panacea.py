@@ -8,9 +8,9 @@ from werkzeug.utils import secure_filename
 warnings.filterwarnings('ignore')
 
 
-path_to_tesseract = r'C:/Program Files (x86)/tesseract/tesseract.exe'
-tessdata_dir_config = '--tessdata-dir "C:/Program Files (x86)/tesseract/tessdata"'
-UPLOAD_FOLDER = 'D:/Internship_work/RFPautomation/files'
+path_to_tesseract = r'tesseract/tesseract.exe'
+tessdata_dir_config = '--tessdata-dir "tesseract/tessdata"'
+UPLOAD_FOLDER = 'files'
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
