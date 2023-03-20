@@ -4,6 +4,7 @@ import warnings
 import os
 from pytesseract import pytesseract
 from werkzeug.utils import secure_filename
+from flask_cors import CORS, cross_origin
 
 warnings.filterwarnings('ignore')
 
@@ -13,9 +14,11 @@ tessdata_dir_config = '--tessdata-dir "tesseract/tessdata"'
 UPLOAD_FOLDER = 'files'
 
 app = Flask(__name__)
+cors = CORS(app)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-@app.route("/invoice_data", methods=['POST'])
+@app.route("/", methods=['POST'])
+@cross_origin()
 def invoice_data():
 
     if request.method == "POST":
